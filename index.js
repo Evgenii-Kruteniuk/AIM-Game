@@ -4,6 +4,8 @@ const timeList = document.querySelector("#time-list");
 const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 
+const colors = ["red", "blue", "yellow"];
+
 let time = 0;
 let score = 0;
 
@@ -27,6 +29,7 @@ timeList.addEventListener("click", (event) => {
     startGame();
   }
 });
+
 /*ф-я при клике на шар, увеличивается счет и пропадает 
 прежний шар.createRandomCircle()- снова появляется шар в другом месте */
 board.addEventListener("click", (event) => {
@@ -84,9 +87,23 @@ function createRandomCircle() {
   circle.style.top = `${y}px`;
   circle.style.left = `${x}px`;
 
+  setColor(circle);
+
   board.append(circle);
 }
 
 function getRandomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
+}
+
+/*ф-я выбирает цвета из массива под определ индексом*/
+function setColor(circle) {
+  const color = getRandomColor();
+  circle.style.background = color;
+}
+
+/*ф-я генерирует наши цвета кружков согласно массиву цветов */
+function getRandomColor() {
+  const index = Math.floor(Math.random() * colors.length);
+  return colors[index];
 }
