@@ -120,3 +120,14 @@ function getRandomColor() {
   const index = Math.floor(Math.random() * colors.length);
   return colors[index];
 }
+
+/*Ф-я которая хакнет игру. Т е автоматически будет щелкать 
+на кружки с заданым нами интервалом в мс*/
+/*function winTheGame() {
+  const circle = document.querySelector(".circle");
+  if (circle) {
+    circle.click();
+  }
+}
+
+setInterval(winTheGame, 100);*/
