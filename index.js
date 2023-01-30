@@ -4,7 +4,20 @@ const timeList = document.querySelector("#time-list");
 const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 
-const colors = ["red", "blue", "yellow"];
+const colors = [
+  "linear-gradient(70deg, #00f2ff 0%, #ff0303 47%, #051ead 100%)",
+  "linear-gradient(270deg, #0c04f9 0%, #03ff07 47%, #ed02f5 100%)",
+  "linear-gradient(130deg, #7c7c82 0%, #38f803 47%, #0000ff 100%)",
+  "linear-gradient(90deg, #ccff00 0%, #73ff00 47%, #097809 100%)",
+  "linear-gradient(90deg, #fb0202 0%, #f77d02 50%, #800000 100%)",
+  "linear-gradient(90deg, #6dfa02 0%, #040cf5 47%, #ff0000 100%)",
+  "linear-gradient(20deg, #ffff00 0%, #f0ad03 47%, #df3eaf 100%)",
+  "linear-gradient(90deg, #fd0303 0%, #d3f300 47%, #4ff602 100%)",
+  "linear-gradient(90deg, #e9e107 0%, #f69c00 47%, #905b0c 100%)",
+  "linear-gradient(90deg, #fa02d4 0%, #0420f4 47%, #1cf304 100%)",
+  "linear-gradient(140deg, #ff1493 0%, #10f504 47%, #f90185 100%)",
+  "linear-gradient(180deg, #ffffff 0%, #020afa 47%, #ff0202 100%)",
+];
 
 let time = 0;
 let score = 0;
